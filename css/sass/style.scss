@@ -1,0 +1,92 @@
+@import "variables", "dir-mixins", "settings", "classes";
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  //   margin-bottom: 5vh;
+  //   text-align: center;
+  //   text-transform: uppercase;
+}
+
+.test-img {
+  float: right;
+  overflow: hidden;
+  clear: both;
+  width: 100%;
+  img {
+    width: calc(25% - 10px);
+    height: 120px;
+    padding: 10px;
+    &:first-child {
+      height: 100%;
+      width: calc(50% - 20px);
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      width: calc(50% - 20px);
+      height: 300px;
+    }
+  }
+}
+
+.card-img {
+  height: 150px;
+  width: 25%;
+}
+
+.cont-2 .wrap-first {
+  display: flex;
+  flex-flow: column wrap;
+  .card-img {
+    &:nth-child(1) {
+      height: 100%;
+      width: 50%;
+    }
+
+    &:nth-child(2) {
+      height: 250px;
+      width: 50%;
+      flex-grow: 1;
+    }
+
+    &:nth-child(3) {
+      height: 250px;
+      width: 50%;
+      flex-grow: 1;
+    }
+  }
+}
+.cont-2 .wrap-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Presentational Styles
+
+.background {
+  align-items: center;
+  background: #ff678c;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+button {
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 0;
+  color: #ff648a;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    background-color: #ff648a;
+    border: 2px solid white;
+    color: white;
+  }
+}
